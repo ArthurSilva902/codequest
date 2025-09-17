@@ -21,6 +21,9 @@ build/
 *.swp
 *.swo
 
+# Bolt.new configuration
+.bolt/
+
 # OS generated files
 .DS_Store
 .DS_Store?
