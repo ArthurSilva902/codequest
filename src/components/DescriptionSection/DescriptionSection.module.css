@@ -1,0 +1,46 @@
+/* Description Section CSS Module */
+.description {
+  width: 100%;
+  padding: 4rem 0;
+  border-bottom: 1px solid black;
+}
+
+.container {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.title {
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: black;
+  font-size: 2rem;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.25rem;
+  }
+}
+
+.text {
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  color: black;
+  font-size: 1.125rem;
+  letter-spacing: -0.025em;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .text {
+    font-size: 1.25rem;
+  }
+}

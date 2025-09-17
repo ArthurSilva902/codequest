@@ -1,0 +1,127 @@
+/* Footer Section CSS Module */
+.footer {
+  width: 100%;
+  background-color: white;
+}
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.logo {
+  margin-bottom: 2rem;
+}
+
+.logoText {
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 2.25rem;
+  letter-spacing: 0.1em;
+  background: linear-gradient(90deg, rgba(30,172,227,1) 0%, rgba(21,47,108,1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+.separator {
+  margin: 2rem 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.columnTitle {
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: black;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.columnLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.columnLink {
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  color: #6b7280;
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+  cursor: pointer;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.columnLink:hover {
+  color: black;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.socialIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.socialIcon:hover {
+  opacity: 0.7;
+}
+
+.socialIcon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.copyright {
+  text-align: center;
+}
+
+.copyrightText {
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  color: #6b7280;
+  font-size: 0.875rem;
+}

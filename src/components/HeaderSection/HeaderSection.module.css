@@ -1,0 +1,118 @@
+/* Header Section CSS Module */
+.header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-bottom: 2px solid black;
+  padding: 0 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logoText {
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: black;
+  font-size: 1.5rem;
+  letter-spacing: -0.33px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.navItem {
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: black;
+  font-size: 1.25rem;
+  letter-spacing: -0.33px;
+  transition: color 0.2s ease;
+}
+
+.navItem:hover {
+  color: #6b7280;
+}
+
+.navFirst {
+  width: 8rem;
+}
+
+.navMiddle {
+  width: 8rem;
+}
+
+.navLast {
+  width: 11rem;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  border-radius: 50px;
+  border: 1px solid black;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.search:hover {
+  background-color: #f9fafb;
+}
+
+.searchContent {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 1rem;
+}
+
+.searchIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: black;
+}
+
+.searchText {
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: black;
+  font-size: 1rem;
+  letter-spacing: -0.33px;
+  white-space: nowrap;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.button {
+  width: 150px;
+  height: 50px;
+  border-radius: 40px;
+  transition: all 0.2s ease;
+}
+
+.buttonText {
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 0.875rem;
+  letter-spacing: -0.33px;
+}

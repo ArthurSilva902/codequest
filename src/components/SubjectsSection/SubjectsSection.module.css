@@ -1,0 +1,121 @@
+/* Subjects Section CSS Module */
+.subjects {
+  width: 100%;
+  padding: 4rem 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 0 2rem;
+}
+
+.headerIcon {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+}
+
+.headerTitle {
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  color: black;
+  font-size: 1.5rem;
+  letter-spacing: -0.025em;
+}
+
+.description {
+  padding: 0 2rem;
+  margin-bottom: 3rem;
+}
+
+.descriptionText {
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: black;
+  font-size: 1.25rem;
+  letter-spacing: -0.025em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 0 2rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 1.5rem;
+  border: 2px solid black;
+  overflow: hidden;
+  height: 12rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}
+
+.cardContent {
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardHeader {
+  margin-bottom: 1rem;
+}
+
+.cardTitle {
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: black;
+  font-size: 1.125rem;
+  text-align: center;
+  letter-spacing: -0.025em;
+}
+
+.cardBody {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cardDescription {
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  color: #374151;
+  font-size: 0.875rem;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.cardIconContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.cardIcon {
+  width: 4rem;
+  height: 4rem;
+}
