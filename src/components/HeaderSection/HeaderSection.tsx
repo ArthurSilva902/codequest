@@ -1,6 +1,5 @@
 import React from "react";
 import { SearchIcon } from "lucide-react";
-import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
 import { HeaderProps, NavigationItem } from "../../types";
 import styles from "./HeaderSection.module.css";
@@ -42,15 +41,15 @@ const HeaderSection: React.FC<HeaderProps> = ({ className = "" }) => {
       {/* Navigation */}
       <nav className={styles.navigation}>
         {navigationItems.map((item, index) => (
-          <Link
+          <button
             key={item.label}
             className={getNavClassName(index)}
-            to={item.href}
+            onClick={() => console.log(`Navigate to: ${item.href}`)}
           >
             <div className={styles.navItem}>
               {item.label}
             </div>
-          </Link>
+          </button>
         ))}
       </nav>
 

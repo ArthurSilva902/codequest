@@ -1,16 +1,20 @@
 import React from "react";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import WebHome from "./pages/WebHome";
-
-const router = createBrowserRouter([
-  {
-    path: "/*",
-    element: <WebHome />,
-  },
-]);
+import HeaderSection from "./components/HeaderSection/HeaderSection";
+import DescriptionSection from "./components/DescriptionSection/DescriptionSection";
+import LoginOptionsSection from "./components/LoginOptionsSection/LoginOptionsSection";
+import SubjectsSection from "./components/SubjectsSection/SubjectsSection";
+import FooterSection from "./components/FooterSection/FooterSection";
 
 const App: React.FC = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <div className="bg-white overflow-hidden w-full flex flex-col">
+      <HeaderSection />
+      <DescriptionSection />
+      <LoginOptionsSection />
+      <SubjectsSection />
+      <FooterSection />
+    </div>
+  );
 };
 
 export default App;

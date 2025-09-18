@@ -23,12 +23,37 @@
   padding: 4rem 2rem;
 }
 
+@media (max-width: 768px) {
+  .content {
+    padding: 3rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 2rem 1rem;
+  }
+}
+
 .container {
   max-width: 28rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    gap: 1rem;
+  }
 }
 
 .title {
