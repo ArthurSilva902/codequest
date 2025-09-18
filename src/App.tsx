@@ -1,19 +1,16 @@
 import React from "react";
-import HeaderSection from "./components/HeaderSection/HeaderSection";
-import DescriptionSection from "./components/DescriptionSection/DescriptionSection";
-import LoginOptionsSection from "./components/LoginOptionsSection/LoginOptionsSection";
-import SubjectsSection from "./components/SubjectsSection/SubjectsSection";
-import FooterSection from "./components/FooterSection/FooterSection";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
 
 const App: React.FC = () => {
   return (
-    <div className="bg-white overflow-hidden w-full flex flex-col">
-      <HeaderSection />
-      <DescriptionSection />
-      <LoginOptionsSection />
-      <SubjectsSection />
-      <FooterSection />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+      </Routes>
+    </Router>
   );
 };
 

@@ -1,22 +1,23 @@
 import React from "react";
 import { SearchIcon } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
 import { HeaderProps, NavigationItem } from "../../types";
 import styles from "./HeaderSection.module.css";
 
 const navigationItems: NavigationItem[] = [
-  { label: "INICIO", href: "/webhome" },
+  { label: "INICIO", href: "/" },
   { label: "DESAFIOS", href: "#" },
   { label: "MEU PROGRESSO", href: "#" },
 ];
 
 const HeaderSection: React.FC<HeaderProps> = ({ className = "" }) => {
   const handleLogin = () => {
-    console.log("Login clicked");
+    window.location.href = "/login";
   };
 
   const handleRegister = () => {
-    console.log("Register clicked");
+    window.location.href = "/login";
   };
 
   const handleSearch = () => {
@@ -41,15 +42,15 @@ const HeaderSection: React.FC<HeaderProps> = ({ className = "" }) => {
       {/* Navigation */}
       <nav className={styles.navigation}>
         {navigationItems.map((item, index) => (
-          <button
+          <Link
             key={item.label}
             className={getNavClassName(index)}
-            onClick={() => console.log(`Navigate to: ${item.href}`)}
+            to={item.href}
           >
             <div className={styles.navItem}>
               {item.label}
             </div>
-          </button>
+          </Link>
         ))}
       </nav>
 

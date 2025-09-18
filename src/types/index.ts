@@ -68,3 +68,7 @@ export interface SubjectsProps {
   description?: string;
   subjects?: SubjectCard[];
 }
+
+export interface LoginSectionProps {
+  className?: string;
+}
