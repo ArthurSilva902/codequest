@@ -26,7 +26,7 @@ const LoginSection: React.FC<LoginSectionProps> = ({ className = "" }) => {
   };
 
   const handleCreateAccount = () => {
-    console.log("Create account clicked");
+    navigate("/register");
   };
 
   const handleBackToHome = () => {

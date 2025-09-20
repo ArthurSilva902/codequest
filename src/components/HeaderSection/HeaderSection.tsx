@@ -17,7 +17,7 @@ const HeaderSection: React.FC<HeaderProps> = ({ className = "" }) => {
   };
 
   const handleRegister = () => {
-    window.location.href = "/login";
+    window.location.href = "/register";
   };
 
   const handleSearch = () => {

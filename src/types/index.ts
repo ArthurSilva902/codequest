@@ -72,3 +72,7 @@ export interface SubjectsProps {
 export interface LoginSectionProps {
   className?: string;
 }
+
+export interface RegisterSectionProps {
+  className?: string;
+}
