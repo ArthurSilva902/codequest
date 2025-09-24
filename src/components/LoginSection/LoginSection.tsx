@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../ui/button";
 import { LoginSectionProps } from "../../types";
@@ -9,8 +10,21 @@ const LoginSection: React.FC<LoginSectionProps> = ({ className = "" }) => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = () => {
-    console.log("Login clicked", { email, password });
+  const handleLogin = async (e?: React.MouseEvent) => {
+    e?.preventDefault();
+    try {
+      const { data } = await axios.post(
+        "/api/auth/login",
+        { email, senha: password },
+        { withCredentials: true }
+      );
+      localStorage.setItem("token", data.token);
+      axios.defaults.headers.common["Authorization"] = `Bearer ${data.token}`;
+      navigate("/home");
+    } catch (err: any) {
+      const msg = err?.response?.data?.erro || err?.message || "Falha no login";
+      alert(msg);
+    }
   };
 
   const handleGoogleLogin = () => {

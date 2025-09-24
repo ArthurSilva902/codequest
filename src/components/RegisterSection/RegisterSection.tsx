@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../ui/button";
 import { RegisterSectionProps } from "../../types";
@@ -13,15 +14,32 @@ const RegisterSection: React.FC<RegisterSectionProps> = ({ className = "" }) => 
   const [phone, setPhone] = useState("");
   const navigate = useNavigate();
 
-  const handleRegister = () => {
-    console.log("Register clicked", { 
-      firstName, 
-      lastName, 
-      email, 
-      password, 
-      confirmPassword, 
-      phone 
-    });
+  const handleRegister = async (e?: React.MouseEvent) => {
+    e?.preventDefault();
+    if (password !== confirmPassword) {
+      alert("As senhas não coincidem");
+      return;
+    }
+    try {
+      // Backend espera: nome, email, senha, role (opcional)
+      const nome = `${firstName} ${lastName}`.trim();
+      await axios.post(
+        "/api/usuarios",
+        { nome, email, senha: password },
+        { withCredentials: true }
+      );
+      // Auto-login após cadastro
+      const { data } = await axios.post(
+        "/api/auth/login",
+        { email, senha: password }
+      );
+      localStorage.setItem("token", data.token);
+      axios.defaults.headers.common["Authorization"] = `Bearer ${data.token}`;
+      navigate("/home");
+    } catch (err: any) {
+      const msg = err?.response?.data?.erro || err?.message || "Falha no cadastro";
+      alert(msg);
+    }
   };
 
   const handleLogin = () => {
